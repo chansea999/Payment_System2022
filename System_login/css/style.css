@@ -1,0 +1,573 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  transition: all 3s ease;
+}
+:root {
+    --b :black;
+    --red:red;
+    --white: #fff;
+    --black: #222;
+    --green: #6cbe02;
+    --grey1:#ccc;
+    --grey2: #e9d7d3c5;
+    --blue: blue;
+  }
+body{
+    margin: 0px;
+    padding: 0px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-image: url(../images/bg.jpg);
+}
+/* for lab */
+.ms-1{
+    color:var(--white);
+    background-color: var(--blue);
+    border-radius:10px;
+    padding: 10px;
+    width: auto;
+    text-decoration: underline;
+}
+.ms-2{
+    color:var(--white);
+    background:var(--blue);
+    padding: 6px;
+    height:60px;
+    border-radius: 10px;
+}
+.modal-title{
+    color:var(--blue);
+}
+.modal-content{
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-10.1%, 20%);
+    background:url(../images/bg.png);
+    border-radius: 15px !important;
+}
+input.form-control, select.form-control{
+    width: 80%;
+}
+#form_1{
+    margin:0px auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 80%;
+    min-height: 200px;
+    border: solid 1px var(--white);
+    
+}
+/* end for lab */
+
+.fas{
+    margin-left: 6px;
+}
+.form-control{
+    width: 100% !important;
+}
+.modal-body{
+    color:var(--black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background:url(../images/bg.jpg);
+}
+
+.header{
+    position: fixed;
+    top: -2px;
+    left: 0px;
+    background-color:var(--black);
+    width: 100%;
+    height: 70px;
+    font-family: "Khmer OS Muol Light";
+    text-align: center;
+    padding-top:15px;
+    box-shadow: 0px -4px var(--black);
+    color:var(--white);
+    box-shadow: 0 0 10px 5px var(--black);
+}
+.login{
+    width:350px ;
+    height: 350px;
+    border: 1px solid rgba(0, 0, 255, 0.664);
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color:rgb(20, 95, 235);
+    box-shadow: -1px 1px 1px 1px #18393f;
+}
+
+.container{
+    margin: 5px;
+}
+input[type="text"]{
+    color:var(--blue);
+}
+input[type="password"]{
+    color:var(--blue);
+}
+.container .btn{
+    border: none;
+}
+.container .btn1{
+    width: 70%;
+    height: 20px;
+    background-color: rgb(251, 252, 253);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius:2px;
+}
+.container .btn1:hover{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+#btn{
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(20, 95, 235);
+    cursor: pointer;
+    margin-left: 100px;
+    color: aliceblue;
+    padding: 2px;
+    text-transform: uppercase;
+
+}
+#btn:hover{
+    border-radius: 20px;
+    background-color:black;
+    cursor: pointer;
+    color: aliceblue;
+}
+#btn-clear{
+    margin-left: 23px;
+    width: 125px;
+    border-radius: 20px;
+    padding: 2px;
+    margin-top: 5px;
+    padding: 0px 20px !important;
+    height: 35px;
+    color: var(--white);
+    background: blue;
+}
+#btn-clear:hover{
+    background: red;
+}
+.content{
+    width: 900px;
+    margin: 20px auto !important;
+    margin-top: 90px !important;
+    border-radius: 5px;
+    padding: 15px;
+    background-color:rgb(221, 221, 221);
+    box-shadow: 0 0 0 3px rgb(0 0 0 / 20%);
+}
+.input-txt{
+    margin:0px;
+    width: fit-content;
+    height: 35px;
+    border: 1px solid rgb(115, 205, 228);
+    border-radius: 5px 5px 0px 0px;
+    color: antiquewhite;
+    background-color: rgb(94, 145, 204);
+    padding: 5px ;
+    font-family: 'Khmer OS';
+}
+table {
+    border-collapse: collapse;
+}
+.input{
+    outline: none;
+    /* border: 1px solid blue; */
+    border: none;
+    width: 880px;
+    height: 30px;
+}
+span{
+    padding: 20px;
+    margin: 20px;
+    background-color: aqua;
+}
+button{
+    cursor: pointer;
+}
+#show,#btn-clear-1{
+    width: 130px;
+    height: 35px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    background-color:blue;
+    font-family: 'Khmer OS';
+    border: none;
+    color:var(--white);
+
+}
+#show:hover,#btn-clear-1:hover{
+    border-radius: 5px;
+    background-color:var(--black);
+    font-family: 'Khmer OS';
+}
+#btn-clear-1{
+    width: 90px;
+    background:var(--red);
+    margin-left: 15px;
+}
+.money-loan{
+    width: fit-content;
+    height: 85px;
+    background-color: blue;
+    margin: 25px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: aliceblue;
+    font-family: 'Khmer OS';
+}
+.money-loan-inside{
+    width: auto;
+    height: 30px;
+    border: 1px solid black;
+    background-color:aliceblue;
+    margin: 5px;
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+}
+.money-loan1{
+    text-align: center;
+    margin:5px;
+}
+.table-pay{
+    width:100%;
+    height: 70px;
+    text-decoration: underline;
+    border-radius: 5px;
+    background-color: blue;
+    font-family: 'Khmer OS Muol Light';
+    color: aliceblue;
+    text-align: center;
+}
+.table-pay p{
+    margin-top: -30px !important; 
+}
+.tb2{
+    text-align: center;
+}
+.tbn{
+    margin: 20px;
+    width: 200px;
+}
+.td2{
+    width: 300px;
+}
+.table{
+    width:100% ;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color:aliceblue;
+}
+.table tr{
+    border-bottom: 1px solid blue;
+    padding-top:20px;
+
+}
+
+
+/* Login Effect */
+
+.shadow{
+    position: relative;
+    margin: 200px auto;
+    width: 400px;
+    height: 280px;
+    margin-top: 150px;
+    border-radius:5px;
+    padding-bottom: 20px;
+    background: linear-gradient(0deg,rgb(250, 247, 247),#faf8f8);
+}
+.shadow:before,.shadow::after{
+    content: '';
+    position:absolute;
+    top:-2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00
+    ,#ff0000,#fb0094,#0000ff,#00ff00,#ff0000);
+    background-size: 400%;
+    width:calc( 100% + 4px);
+    height:calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position:0 0;
+
+    }
+    50%
+    {
+        background-position: 300% 0;
+
+    }
+    100%{
+        background-position:0 0;
+
+    }
+}
+
+/* Color Variables */
+
+/* start box */
+.box_1 {
+    position: fixed;
+    top: 23px;
+    left: 0px;
+    width: 90%;
+    z-index: 1;
+    transition: 0.3s;
+    transition: all 3s ease;
+}
+
+.box-content {
+    position: absolute;
+    top: 380px;
+    left: 55%;
+    width: 60%;
+    height: 20px;
+    margin: 0 auto;
+    transform: translate(-50%, -60%);
+    display: table;
+    overflow: hidden;
+    background-image: url(../images/bg.png);
+    border-radius: 1rem;
+    background-size: cover;
+}
+
+.box-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 1rem;
+    padding: 0.5rem;
+    background-color: var(--red);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color:var(--white);
+    cursor: pointer;
+}
+
+.box-close:hover{
+    color:var(--white);
+    background:var(--green);
+}
+
+.box-left {
+    display: table-cell;
+    width: 70%;
+    max-width: 400px;
+    height: 5%;
+    vertical-align: middle;
+}
+
+.box-right {
+    display: table-cell;
+    width: 30%;
+    height: 40px;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+}
+
+.box-img-container {
+    position: relative;
+    max-width: 600px;
+    width: 340px;
+    overflow: hidden;
+    margin-left: 35px;
+    border-radius: 0.7rem;
+    margin: 50px;
+}
+
+.box-img-container img.box-img {
+    display: block;
+    cursor: pointer;
+    width: 90rem;
+    height: 20rem;
+    max-width: 100%;
+    object-fit: cover;
+    transition: all 2s ease;
+}
+.box-img-container .name-span{
+    position: absolute;
+    left: 35%;
+    bottom: 10px;
+    z-index: 1000;
+    font-size: 26px;
+    font-family: 'Judson', serif;
+    background:none;
+    color:var(--white);
+}
+.box-img-container img.box-img:hover{
+    transform: scale(1.1);
+}
+
+.right-content {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.right-content h1 {
+    font-size: 2rem;
+    color:var(--blue);
+    margin-bottom: 1.6rem;
+}
+
+.right-content p {
+    color:var(--red);
+    font-size: large;
+    margin-bottom: 1.6rem;
+}
+
+.btn-form {
+    width: 100%;
+    padding: 1rem ;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 1.5rem;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1rem;
+    border: none;
+}
+
+.btn-form::placeholder {
+    color: var(--white);
+    font-size: 18px;
+}
+
+.btn-form:focus {
+    outline: none;
+}
+
+.right-content a:link,
+.right-content a:visited {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 4.3rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    color: var(--green);
+    background-color:var(--b);
+    border: 1px solid var(--grey2);
+    transition: 0.3s;
+}
+
+.right-content a:hover {
+    background-color: var(--green);
+    border: 1px solid var(--grey2);
+    color: var(--white);
+}
+.hide-box {
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+}
+/* end box */
+
+
+.header-log{
+    font-family: "Khmer OS Muol Light";
+    text-align: center;
+    padding-top: 10px;
+    background-color:var(--blue);
+    width:400px ;
+    height:70px;
+    border-bottom: 2px;
+    border-radius:2px;
+    font-size: 40px;
+    border-bottom: 1px solid var(--red);
+}
+.container{
+    margin: 5px;
+    padding-top: 20px;
+}
+.container .btn1{
+    width: 70%;
+    outline: none;
+    height: 30px;
+    background-color: rgb(249, 255, 255);
+    border: 2px solid rgb(56, 190, 214);
+    border-radius:5px;
+}
+.container .btn1:hover{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+.container .btn1::placeholder{
+    color:var(--green);
+}
+
+
+/* start top */
+.Top{
+    border: 1px solid var(--red);
+    border-radius: 5px;
+    position: fixed;
+    bottom: 16px;
+    right: 10px;
+    z-index:1000px;
+    height: 38px;
+    background:var(--black);
+    width: 40px;
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    box-shadow: 0px 0 10px 5px var(--grey1);
+
+}
+.Top:hover{
+    background:red;
+    border: 1px solid var(--white);
+}
+.Top i{
+    color:var(--white);
+    font-size: 37px;
+    line-height: 1em;
+}
+/* end top */
+
+/* start footer */
+.footer{
+    width: 100%;
+    height: 80px;
+    background:var(--black);
+}
+.footer p{
+    font-size: 1rem;
+    padding:25px;
+    text-align: center;
+    color:var(--white);
+}
+.footer p span{
+    background: none;
+    color:var(--blue);
+    margin:0px;
+    padding: 0px;
+}
+.footer p span:hover{
+    color:var(--white);
+    cursor: pointer;
+}
+/* end footer */
+

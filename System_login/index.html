@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Create a professional website for free with the Website.com website builder. Domain names, web hosting, website templates, and solutions">
+        <title>Payment</title>
+        <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+        <!--for costume css -->
+        <link rel="stylesheet"type ="text/css" href="css/style.css">
+        <!-- for link to icon -->
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+         rel="stylesheet"
+       />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!-- link to bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.6.0.js"></script>
+    </head>
+<body>
+    <h2 class="header">
+        ប្រព័ន្ធបង់ប្រាក់
+    </h2>
+    <div class="shadow">
+        <h1 class="header-log">ប្រព័ន្ធបង់ប្រាក់</h1>
+        <div class="container">
+                <label for="uname"><b>Username:</b></label>
+                <input class="btn1" id="na" type="text" placeholder="seachan" name="uname" required><br><br>
+                <label for="psw"><b>Password :</b></label>
+                <input class="btn1" id="pa" type="password" placeholder="seachan123" name="psw" required><br><br>
+                <button class="btn" id="btn" type="submit">Login<i class="fas fa-sign-in-alt"></i>
+                </button>
+                <button class="btn" id="btn-clear" onclick="Clear_login()">CLEAR<i class="fas fa-trash-alt"></i>
+                </button>
+        </div> 
+    </div>
+
+<!-- Start Content -->
+<div class="content">
+    <form action="">
+        <table>
+            <tr>
+                <td><p class="input-txt" id="input-txt">ប្រាក់កម្ចី​៖</p></td>
+            </tr>
+            <tr>
+                <td><input type="number" class="input" id="laon-money" required></td>
+            </tr>
+            <tr>
+                <td><p class="input-txt" id="input-txt">អត្រាការប្រាក់ក្នុងមួយឆ្នាំ៖</p></td>
+            </tr>
+            <tr>
+                <td><input type="number" class="input" id="loan-tax" required></td>
+            </tr>
+            <tr>
+                <td><p class="input-txt" id="input-txt">រយៈពេលបង់រំលស់គិតជាឆ្នាំ៖</p></td>
+            </tr>
+            <tr>
+                <td><select class="input" id="time-pay" required>
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><p class="input-txt">បង់រំលោះជា៖</p></td>
+            </tr>
+            <tr>
+                <td><select class="input" id="pay-by" >
+                    <option></option>
+                    <option>ខែ</option>
+                    <option>ឆ្នាំ</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><p class="input-txt">កាលបរិច្ឆេទចាបើផ្ដើមបង់រំលោះ៖</p></td>
+            </tr>
+            <tr>
+                <td><input type="DATE" class="input" id="date-pay"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="show">Calculator<i class="fas fa-calculator"></i></button>
+                    <button class="btn-clear-1" id="btn-clear-1" onclick="clear_content()">Clear<i class="fas fa-trash-alt"></i></button>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="table-pay"><p​>តារាងបង់ប្រាក់</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="money-loan">
+                        <p class="money-loan1">ប្រាក់កម្ចី</p>
+                        <p class="money-loan-inside" id="monney-lend">N/A</p>
+                    </div>
+                    <div class="money-loan">
+                        <p class="money-loan1">អត្រាការប្រាក់(ក្នុងមួយឆ្នាំ)៖</p>
+                        <p class="money-loan-inside" id="pay-through">N/A</p>
+                    </div>
+                    <div class="money-loan">
+                        <p class="money-loan1">រយៈពេល(គិតជាឆ្នាំ)៖</p>
+                        <p class="money-loan-inside"id ="pay-year">N/A</p>
+                    </div>
+                    <div class="money-loan">
+                        <p class="money-loan1">បង់ប្រចាំ៖</p>
+                        <p class="money-loan-inside" id="pay-every">N/A</p>
+                    </div>
+                    <div class="money-loan">
+                        <p class="money-loan1">កាលបរិច្ឆេទ៖</p>
+                        <p class="money-loan-inside" id="d-pay">N/A</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+        </table>
+        <table id="showinv" class="table">
+        </table>
+    </form>
+
+<!-- Start For Lab -->
+<div class="form-container mt-4">
+    <div class="d-flex align-items-center justify-content-center">
+        <img style="border-radius: 5rem;border:2px solid blue;" src="images/logo.jpg" width="100px" />
+        <h3 class="ms-4 ms-1">ELETRICITE DU COMBODIA (EDC)</h3>
+    </div>
+    <div class="row m-0">
+        <div class="col-6 p-5" id="form_1">
+            <div class="mb-3">
+                <label for="txtNo" class="form-label">Customer No</label>
+                <input type="number" class="form-control" id="txtNo" >
+            </div>
+            <div class="mb-3">
+                <label for="txtName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="txtName" >
+            </div>
+            <div class="mb-3">
+                <label for="txtOldMotor" class="form-label">Old Number</label>
+                <input type="number" class="form-control" id="txtOldMotor" >
+            </div>
+            <div class="mb-3">
+                <label for="txtNewMotor" class="form-label">New Number</label>
+                <input type="number" class="form-control" id="txtNewMotor" >
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" id="txtCheckTrash" onchange="updateTrashDropDown(event)"/> <label for="txtCheckTrash" class="form-label">Garbage Collection Fee</label>
+                <select name="txtTrashFee" id="txtTrashFee" class="form-control" disabled>
+                    <option value="5000">5000R (Flat)</option>
+                    <option value="10000">10000R (Villa)</option>
+                    <option value="15000">15000R (Business)</option>
+                    <option value="20000">20000R (Others)</option>
+                </select>
+            </div>
+            <div style="width: 100%;" class="mb-3 d-flex justify-content-between">
+                <button class="btn btn-primary" onclick="showFirstResult()">
+                    Calculate
+                    <i class="fas fa-calculator"></i>
+                </button>
+                <button class="btn btn-danger"onclick="ClearAll()">
+                    Clear
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            <hr>
+            <p class="result" style="background-color:white;padding:25px; border-radius: 10px;" id="result_cal">
+
+            </p>
+        </div>
+        <div class="col-6 p-5 d-flex flex-column align-items-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#welcomeModal">
+                Calculate <i class="fas fa-calculator"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="modal-container" id="form_2"">
+    <!-- next-->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="welcomeModal">Welcome</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img style="border-radius: 5rem;border:2px solid blue;" src="images/logo.jpg" width="100" />
+                        <h3 class="ms-4 ms-2">អគ្គិសនីកម្ពុជា (EDC)</h3>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Close
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#numberModal"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next-->
+    <div class="modal fade" id="numberModal" tabindex="-1" aria-labelledby="numberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="numberModalLabel">Information</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="txtNo2" class="form-label">Customer No</label>
+                    <input type="number" class="form-control" id="txtNo2">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Close<i class="fas fa-window-close"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nameModal"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- next-->
+    <div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nameModalLabel">Information</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="txtName2" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="txtName2">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Close
+                        <i class="fas fa-window-close"></i></button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#oldNumberModal"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next-->
+    <div class="modal fade" id="oldNumberModal" tabindex="-1" aria-labelledby="oldNumberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="oldNumberModalLabel">Information</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="txtoldMotor2" class="form-label">Old Number</label>
+                    <input type="number" class="form-control" id="txtoldMotor2">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close<i class="fas fa-window-close"></i></button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newNumberModal"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next-->
+    <div class="modal fade" id="newNumberModal" tabindex="-1" aria-labelledby="newNumberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newNumberModalLabel">Information</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="txtnewMotor2" class="form-label">New Number</label>
+                    <input type="number" class="form-control" id="txtnewMotor2">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close<i class="fas fa-window-close"></i></button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trashFeeModal"
+                        data-bs-dismiss="modal" aria-label="Close">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next-->
+    <div class="modal fade" id="trashFeeModal" tabindex="-1" aria-labelledby="trashFeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trashFeeModalLabel">Information</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="checkbox" id="txtCheckTrash2" onchange="updateTrashDropDown(event)"/>
+                    <label for="txtCheckTrash2" class="form-label">Garbage Collection Fee</label>
+                    <select name="txtTrash_Fee2" id="txtTrash_Fee2" class="form-control" disabled>
+                        <option value="5000">5000R (Flat)</option>
+                        <option value="10000">10000R (Villa)</option>
+                        <option value="15000">15000R (Business)</option>
+                        <option value="20000">20000R (Others)</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Close 
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resultModal"
+                        data-bs-dismiss="modal" aria-label="Close" onclick="showSecondResult()">
+                        Next
+                        <i class="fas fa-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- next-->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Result:</h5>
+                    <button type="button" class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="result_cal1">
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close<i class="fas fa-window-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end For Lab -->
+
+</div>
+<!-- End Content -->
+
+<!-- start notification  -->
+<div class="box_1 hide-box">
+    <div class="box-content">
+      <div class="box-close">
+        <i class='bx bx-x'></i>
+      </div>
+      <div class="box-left">
+        <div class="box-img-container">
+          <img class="box-img" src="images/popup.jpg" alt="box-image">
+          <h1 class="name-span">SEA CHAN</h1>
+        </div>
+      </div>
+      <div class="box-right">
+        <div class="right-content">
+          <h1>SEA CHAN</h1>
+          <p>
+            Design Only FrontEnd.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="chan.sea999@gmail.com" class="btn-form">
+            <a href="#">Subscribe</a>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end notification -->
+
+<!-- Start top -->
+<div onclick="click_top()" class="Top">
+    <i class="bx bx-chevron-up"></i>
+</div>
+<!-- end top -->
+
+<!-- start footer -->
+<div class="footer">
+        <p>Copyright© <span>By SEA CHAN</span> 2022</p>
+</div>
+<!-- end footer -->
+</body>
+<script src="js/main.js">
+
+</script>
+<script src="js/main1.js"></script>
+
+<script>
+// popup of the notification
+const box_1 = document.querySelector(".box_1");
+const closePopup = document.querySelector(".box-close");
+
+    if (box_1) {
+    closePopup.addEventListener("click", () => {
+    box_1.classList.add("hide-box");
+
+  });
+
+  window.addEventListener("load", () => {
+
+    setTimeout(() => {
+      box_1.classList.remove("hide-box");
+    },1000);
+
+  });
+
+}
+
+</script>
+<script>
+// on_clink to top
+function click_top(){
+    window.scrollTo(0,0);
+}
+</script>
+</html>
